@@ -1,4 +1,4 @@
-from playwright.sync_api import sync_playwright, Request, Response
+from playwright.sync_api import Request, Response, sync_playwright
 
 
 # Логирование запросов

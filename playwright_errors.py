@@ -6,7 +6,9 @@ with sync_playwright() as playwright:
     page = browser.new_page()
 
     # Переходим на страницу входа
-    page.goto("https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/auth/login", wait_until='networkidle')
+    page.goto(
+        "https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/auth/login", wait_until="networkidle"
+    )
 
     # Пытаемся проверить, что несуществующий локатор виден на странице
     # unknown = page.locator('#unknown')
@@ -17,7 +19,9 @@ with sync_playwright() as playwright:
     # login_button.fill('unknown')
 
     # Пытаемся изменить текст заголовка
-    page.evaluate("""
+    page.evaluate(
+        """
     const title = document.getElementById('authentication-ui-course-title-text');
     title.textContent = 'New Text';
-    """)
+    """
+    )

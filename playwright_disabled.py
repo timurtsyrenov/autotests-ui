@@ -1,4 +1,4 @@
-from playwright.sync_api import sync_playwright, expect
+from playwright.sync_api import expect, sync_playwright
 
 with sync_playwright() as playwright:
     # Открываем браузер и создаем новую страницу
@@ -9,5 +9,5 @@ with sync_playwright() as playwright:
     page.goto("https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/auth/login")
 
     # Проверяем, что кнопка Login не активна
-    login_button = page.get_by_test_id('login-page-login-button')
+    login_button = page.get_by_test_id("login-page-login-button")
     expect(login_button).to_be_disabled()
