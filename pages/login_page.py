@@ -1,6 +1,5 @@
-from playwright.sync_api import Page, expect
-
 from pages.base_page import BasePage
+from playwright.sync_api import Page, expect
 
 
 class LoginPage(BasePage):
@@ -8,11 +7,11 @@ class LoginPage(BasePage):
         super().__init__(page)
 
         # Локаторы элементов страницы
-        self.email_input = page.get_by_test_id('login-form-email-input').locator('input')
-        self.password_input = page.get_by_test_id('login-form-password-input').locator('input')
-        self.login_button = page.get_by_test_id('login-page-login-button')
-        self.registration_link = page.get_by_test_id('login-page-registration-link')
-        self.wrong_email_or_password_alert = page.get_by_test_id('login-page-wrong-email-or-password-alert')
+        self.email_input = page.get_by_test_id("login-form-email-input").locator("input")
+        self.password_input = page.get_by_test_id("login-form-password-input").locator("input")
+        self.login_button = page.get_by_test_id("login-page-login-button")
+        self.registration_link = page.get_by_test_id("login-page-registration-link")
+        self.wrong_email_or_password_alert = page.get_by_test_id("login-page-wrong-email-or-password-alert")
 
     # Метод для заполнения формы авторизации
     def fill_login_form(self, email: str, password: str):
