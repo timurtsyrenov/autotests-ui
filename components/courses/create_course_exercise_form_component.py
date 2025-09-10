@@ -3,9 +3,7 @@ from components.base_component import BaseComponent, expect
 
 class CreateCourseExerciseFormComponent(BaseComponent):
     def click_delete_button(self, index: int):
-        delete_button = self.page.get_by_test_id(
-            f"create-course-exercise-{index}-box-toolbar-delete-exercise-button"
-        )
+        delete_button = self.page.get_by_test_id(f"create-course-exercise-{index}-box-toolbar-delete-exercise-button")
         delete_button.click()
 
     def check_visible(self, index: int, title: str, description: str):
